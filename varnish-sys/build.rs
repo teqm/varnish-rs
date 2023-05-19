@@ -2,7 +2,6 @@ use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    println!("cargo:rustc-link-lib=varnishapi");
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("bindings.rs");
 
     println!("cargo:rerun-if-env-changed=VARNISH_INCLUDE_PATHS");
